@@ -1,0 +1,39 @@
+function mintNFT(_name, _zodiacSign, _birthDay, _birthMonth) {
+	
+	const NFT = {
+		"name" : _name,
+		"zodiacSign" : _zodiacSign,
+		"hairColour" : _birthDay,
+		"birthMonth" : _birthMonth
+	}
+	NFTs.push(NFT);
+	console.log("Minted: " + _name);
+}
+
+// create a "loop" that will go through an "array" of NFT's
+// and print their metadata with console.log()
+function listNFTs() {
+	for(let i = 0;i<NFTs.length;i++) {
+    
+		console.log("\nname: "+NFTs[i].name);
+		console.log("zodiacSign: "+NFTs[i].zodiacSign);
+		console.log("birthDay: "+NFTs[i].birthDay);
+		console.log("birthMonth: "+NFTs[i].birthMonth);
+    
+	}
+
+}
+
+// print the total number of NFTs we have minted to the console
+function getTotalSupply() {
+	console.log("Total Supply: "+NFTs.length);
+}
+
+// call your functions below this line
+mintNFT("Roger", "Libra", "13", "October");
+mintNFT("Jordan", "Virgo", "15", "September");
+mintNFT("Kobe", "Aries", "25", "March");
+mintNFT("Esmeralda", "Cancer", "20", "July");
+listNFTs();
+console.log("\n");
+getTotalSupply();
